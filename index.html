@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#practica-32-despliegue-de-aplicacion-con-node-express" class="nav-link">PRÁCTICA 3.2: DESPLIEGUE DE APLICACION CON NODE EXPRESS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#instalacion-de-nodejs-express-y-test-de-la-primera-aplicacion" class="nav-link">Instalación de Node.js, Express y test de la primera aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#despliegue-de-una-nueva-aplicacion" class="nav-link">Despliegue de una nueva aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#practica-34-despliegue-de-una-aplicacion-react-en-netlify-paas" class="nav-link">PRÁCTICA 3.4: DESPLIEGUE DE UNA APLICACIÓN REACT EN NETLIFY (PaaS)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#creacion-de-nuestra-aplicacion" class="nav-link">Creación de nuestra aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#aplicacion-para-netlify" class="nav-link">Aplicación para Netlify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#proceso-de-despliegue-en-netlify" class="nav-link">Proceso de despliegue en Netlify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#despliegue-mediante-conexion-con-github" class="nav-link">Despliegue mediante conexión con Github.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="practica-32-despliegue-de-aplicacion-con-node-express">PRÁCTICA 3.2: DESPLIEGUE DE APLICACION CON NODE EXPRESS</h1>
+<p>En primer lugar, y tras haber usado tomcat9 en la práctica anterior deberemos desactivarlo de nuestro equipo, ya que este puede causar incompatibilidad con Node.</p>
+<h2 id="instalacion-de-nodejs-express-y-test-de-la-primera-aplicacion">Instalación de Node.js, Express y test de la primera aplicación</h2>
+<p>En primer lugar y sin extendernos mucho procederemos a instalar Node.js de la siguiente manera:</p>
+<p><img alt="Imagen 2" src="images/2.png" /></p>
+<p>Y ahora instalamos Express.js y creamos un un proyecto de prueba:</p>
+<p><img alt="Imagen 3" src="images/3.png" /></p>
+<p><img alt="Imagen 4" src="images/4.png" /></p>
+<p>Y cambiamos localhost por nuestra ip:</p>
+<p><img alt="Imagen 5" src="images/5.png" /></p>
+<p><img alt="Imagen 6" src="images/6.png" /></p>
+<p>Nos dirigimos a la ip con el puerto 3000 y veremos lo siguiente:</p>
+<p><img alt="Imagen 7" src="images/7.png" /></p>
+<h2 id="despliegue-de-una-nueva-aplicacion">Despliegue de una nueva aplicación</h2>
+<p>Ahora desplegaremos una aplicación ya creada. Clonamos el repositorio a nuestra máquina e instalamos las librerias:</p>
+<p><img alt="Imagen 8" src="images/8.png" /></p>
+<p>Por último iniciamos la aplicación</p>
+<p><img alt="Imagen 9" src="images/9.png" /></p>
+<p>Como vemos nos ha soltado un error "sh: 1: nodemo: not found. Para solucionarlo debemos installar nodemon:</p>
+<p><img alt="Imagen 10" src="images/10.png" /></p>
+<p>E iniciamos de nuevo:</p>
+<p><img alt="Imagen 11" src="images/11.png" /></p>
+<p>Ahora podremos visualizar lo sigueinte en nuestro navegador:</p>
+<p><img alt="Imagen 12" src="images/12.png" /></p>
+<h1 id="practica-34-despliegue-de-una-aplicacion-react-en-netlify-paas">PRÁCTICA 3.4: DESPLIEGUE DE UNA APLICACIÓN REACT EN NETLIFY (PaaS)</h1>
+<p>Nos logueamos con ssh en nuestra máquina debian</p>
+<h2 id="creacion-de-nuestra-aplicacion">Creación de nuestra aplicación</h2>
+<p>Creamos un directorio con 3 archivos: head.html, tail.html y aplicacion.js. Dentro del directorio creamos nuestra aplicación Node.js. Ejecutamos node aplicacion.js para ver que funciona correctamente:</p>
+<p><img alt="Imagen 16" src="images/16.png" /></p>
+<p><img alt="Imagen 17" src="images/17.png" /></p>
+<p><img alt="Imagen 18" src="images/18.png" /></p>
+<p><img alt="Imagen 13" src="images/13.png" /></p>
+<p><img alt="Imagen 15" src="images/15.png" /></p>
+<h2 id="aplicacion-para-netlify">Aplicación para Netlify</h2>
+<p>En primer lugar nos clonamos una aplicación creada con React a nuestra máquina:</p>
+<p><img alt="Imagen 19" src="images/19.png" /></p>
+<h2 id="proceso-de-despliegue-en-netlify">Proceso de despliegue en Netlify</h2>
+<p>Antes de nada me he creado una cuenta en Netlify sin enlazar mi github.
+Y a continuación instalamos el CLI de Netlify:</p>
+<p><img alt="Imagen 20" src="images/20.png" /></p>
+<p>Desde la página de Netlify generamos un token que añadimos nuestra máquina:</p>
+<p><img alt="Imagen 21" src="images/21.png" /></p>
+<p>Y a continuación nos logueamos:</p>
+<p><img alt="Imagen 22" src="images/22.png" /></p>
+<p>Como antes instalamos las dependencias y lo ejecutamos de la siguiente forma:</p>
+<p><img alt="Imagen 23" src="images/23.png" /></p>
+<p>Y lo desplegamos:</p>
+<p><img alt="Imagen 24" src="images/24.png" /></p>
+<p><img alt="Imagen 25" src="images/25.png" /></p>
+<p>Ya desplegado, iremos al navegador e introduciremos la url que nos ha proporcionado:</p>
+<p><img alt="Imagen 26" src="images/26.png" /></p>
+<h2 id="despliegue-mediante-conexion-con-github">Despliegue mediante conexión con Github.</h2>
+<p>Eliminamos el proyecto anterior tanto en local como en el servicio de Netlify:</p>
+<p><img alt="Imagen 27" src="images/27.png" /></p>
+<p>Creamos un repositorio en GitHub:</p>
+<p><img alt="Imagen 28" src="images/28.png" /></p>
+<p>Descargamos un repositorio de GitHub:</p>
+<p><img alt="Imagen 29" src="images/29.png" /></p>
+<p>Lo descomprimimos en nuestro directorio:</p>
+<p><img alt="Imagen 30" src="images/30.png" /></p>
+<p>Y a continuación enlazamos el repositorio local con el que acabamos de crear en github y hacemos un push del contenido de este:</p>
+<p><img alt="Imagen 31" src="images/31.png" /></p>
+<p><img alt="Imagen 32" src="images/32.png" /></p>
+<p>Ahora desde la página de Netlify, enlazamos nuestra cuenta de GitHub, seleccionamos nuestro repositorio y lo desplegamos:</p>
+<p><img alt="Imagen 33" src="images/33.png" /></p>
+<p><img alt="Imagen 34" src="images/34.png" /></p>
+<p>Ya desplegado, vamos a hacer un commit en nuestro repositorio de github y comprobaremos que se despliega el cambio automáticamente en Netlify. Para esto modificaremos el contenido del archivo robots.txt, donde añadiremos una carpeta con nuestro nombre:</p>
+<p><img alt="Imagen 35" src="images/35.png" /></p>
+<p>Ahora comprobamos Netlify, y veremos que se ha realizado un cambio con la fecha en la que hemos hecho el push del commit:</p>
+<p><img alt="Imagen 36" src="images/36.png" /></p>
+<p><img alt="Imagen 37" src="images/37.png" /></p>
+<p>Y si nos dirigimos a la siguiente dirección comprobaremos que, efectivamente, se ha realizado el cambio:</p>
+<p><img alt="Imagen 38" src="images/38.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-11-21 22:44:33.627982+00:00
+-->
